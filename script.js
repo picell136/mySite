@@ -2,18 +2,25 @@
 // Приветственная кнопка
 
 document.querySelector(".say-hello").addEventListener("click", function () {
-
     randomNumber = Math.floor(Math.random() * 6) + 1;
-
     let sayHi = new Audio("./sounds/hello_button/sound_" + String(randomNumber) + ".mp3");
         sayHi.play();
-    console.log(sayHi);
-
+    buttonAnimation(this.classList.value);
 })
 
-// document.addEventListener("click", function () {
-//     buttonAnimation(event.key);
-// })
+function buttonAnimation (currentClass) {
+    let activeButton = document.querySelector("." + currentClass);
+    activeButton.classList.add("pressed")
+    setTimeout(function(){                          // функция "отжатия" кнопки в обратное состояние
+        activeButton.classList.remove("pressed");
+    }, 1000)
+}
+
+// Обнаруживаем нажатие клавиатуры 
+
+document.addEventListener("keydown", function () {
+    buttonAnimation();
+})
 
 
 // Кнопка проверки на пидора (рандомайзер) //
