@@ -112,6 +112,7 @@ div a {
 
 .tabs__nav {
     margin-left: 4px;
+    margin-bottom: -2px;
 }
 
 .tabheader__item {
