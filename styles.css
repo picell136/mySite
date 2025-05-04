@@ -58,6 +58,16 @@ div a {
     align-self: center;
 }
 
+.backgroung-header {
+    position: absolute;
+    top: 90px;
+    left: 50px;
+    background-color:#0452b931;
+    height: 850px;
+    width: 90%;
+    z-index: -1;
+}
+
 .title-div {
     background-color:#0aabff;
 }
@@ -72,6 +82,66 @@ div a {
     margin: 1% 30% 0% 30%;
 }
 
+.about {
+    max-width: 90%;
+    margin: 0 auto      /* auto - центрирует элемент по краям */
+}
+
+.teachers {
+    max-width: 90%;
+    margin: 0 auto 
+}
+
+/* Табы */
+
+.preview {
+    max-width: 90%;
+    margin: 0px auto;
+}
+
+.container-tab {
+    width: 100%;
+}
+
+.tabcontainer {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.tabs__nav {
+    margin-left: 4px;
+}
+
+.tabheader__item {
+    font-size: 1.3rem;
+    color: #575757;
+    border: solid #b1c0c2 1px;
+    border-radius: 0px 5px 0px 0px;
+    margin-left: -4px;
+    padding: 7px;
+
+}
+
+.tabheader__item_active {
+    font-size: 2rem;
+    color: #000;
+    font-size: 15px;
+    font-weight: 700
+}
+
+.content_1 {
+    border-radius: 0px 10px 10px 10px;
+    box-shadow: 10px 10px 20px 3px #727272;
+    background-color:#b1c0c2;
+    padding: 5px;
+}
+
+.content_1 ul li {
+    font-size: 2rem;
+    padding: 4px;
+}
 /* Картинки */
 
 .img-header {
@@ -115,7 +185,11 @@ div a {
 }
 
 .faggot {
-    width: 100px;
+    width: 200px;
+    height: 70px;
+    font-size: 2rem;
+    border-radius: 7px;
+    box-shadow: 10px 10px 20px 3px rgba(0, 0, 0, .25);
 }
 
 .pressed {
@@ -182,31 +256,29 @@ footer {
     align-items: center;
 }
 
-.child-button {
-
-}
 
 .container-title {
     
     display: inline-grid;
     grid-template-columns: 20% 20% 20% 20%;
     gap: 2rem;
-    align-items: end; /* выравнивание элементов по верт. оси 
-                         внутри грид-контейнера              */
+    align-items: end;   /* выравнивание элементов по верт. оси 
+                           внутри грид-контейнера              */
     justify-content: center; /* выравние контейнера посередине
                                 работает если ширина колонок меньше 100% */
 }
 
-.main-title {
-    grid-column: span 2; /* объединение 2-х колонок */
+.content {
+    grid-column: span 2;    /* объединение 2-х колонок */
     padding: 20px;
     background-color: #cab385;
     border-radius: 10px;
-    text-align: justify; /* выравнивание (по горизонтали) 
-                            текста внутри элемента       */
+    text-align: justify;    /* выравнивание (по горизонтали) 
+                               текста внутри элемента       */
+    box-shadow: 5px 4px 20px rgba(0, 0, 0, .25)     /*  Тень объекта  */
 }
 
-.container-title_2 { 
+.container-teachers { 
     display: flex;
     justify-content: space-evenly; 
     align-items: flex-start; 
@@ -216,7 +288,7 @@ footer {
     margin: 15px;
 }
 
-.main-title_2 {
+.content_2 {
     display: inline-block;
     flex: 1;
     max-width: 400px;
@@ -225,6 +297,68 @@ footer {
     background-color: #62c48f;
     border-radius: 10px;
     text-align: justify;
+    box-shadow: 10px 10px 20px 3px rgba(0, 0, 0, .25)
+}
+
+.container .button-random {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    /*  Модальное окно   */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color:rgba(0,0,0,.5)
+}
+
+.modal_dialog {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;    
+    align-items: center;
+    margin: auto
+}
+
+.modal_content {
+
+    position: relative;
+    min-width: 30%;
+    padding: 40px;
+    background-color:#fff;
+    border:1px solid rgba(0,0,0,.2);
+    border-radius: 7px;
+    height: 5%;
+    width: 10%;
+    overflow-y: auto
+}
+
+.modal_close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-size: 30px;
+    color:#000;
+    opacity: .5;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    cursor: pointer
+}
+
+.modal_notification {
+    text-align: center;
+    font-size: 1.5rem;
 }
 
     /*  @media элемент  */
@@ -264,7 +398,7 @@ footer {
                                  внутри элемента             */
     }
 
-    .container-title_2 { 
+    .container-teachers { 
         flex-direction: column;
         align-items: center;
     }
