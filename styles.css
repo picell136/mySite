@@ -20,7 +20,10 @@ h3 {
 }
 
 p {
-    font-size: 1.8rem;
+    font-family: "Sansation", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.6rem;
     margin: 5px;
 }
 
@@ -28,6 +31,10 @@ p {
 div a {
     font-size: 1.5rem;
     color: white;
+}
+
+button {
+    font-family: "Sansation", sans-serif;
 }
 
 .header {
@@ -96,39 +103,44 @@ div a {
 
 .preview {
     max-width: 90%;
-    margin: 0px auto;
+    height: 50vh;
+    margin: 10px auto;
 }
 
 .container-tab {
-    width: 100%;
+    display: flex;
+    width: 60%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .tabcontainer {
     display: flex;
-    width: 50%;
-    margin: 0 auto;
+    margin-bottom: auto;
     flex-direction: column;
 }
 
 .tabs__nav {
     margin-left: 4px;
     margin-bottom: -4px;
+    margin-left: 0px;
 }
 
 .tabheader__item {
     font-size: 1.3rem;
-    color: #575757;
+    color: #636363;
     border: solid #b1c0c2 1px;
     border-radius: 0px 5px 0px 0px;
-    margin-left: -4px;
     padding: 7px;
-
+    justify-self: start;
 }
 
 .tabheader__item_active {
-    font-size: 2rem;
+    font-family: "Sansation", sans-serif;
+    font-size: 1.8rem;
     color: #000;
-    font-size: 15px;
     font-weight: 700
 }
 
